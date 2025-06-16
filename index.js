@@ -85,7 +85,6 @@ function cancelEdit(input, nameElement) {
 }
 
 function updateUI() {
-    guestStats.textContent = `${guests.filter(g => g.rsvpStatus === 'Attending').length} attending • ${guests.length}/${MAX_GUESTS} guests`;
     guestList.innerHTML = guests.length ? renderGuestList() : '<p>No guests added.</p>';
     addGuestBtn.disabled = guests.length >= MAX_GUESTS;
 }
